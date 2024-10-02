@@ -10,28 +10,21 @@ public class Main {
         // 2 задача
         byte client = 0;
         short clientDeviceYear = 2015;
-        if (client == 1) {
-            if (clientDeviceYear <= 2015) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else {
+        if (client == 1 && clientDeviceYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            }
+        else if (client == 1 && clientDeviceYear > 2015) {
                 System.out.println("Установите версию приложения для Android по ссылке");
             }
-        }
-        if (client == 0) {
-            if (clientDeviceYear <= 2015) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        if (client == 0 && clientDeviceYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             } else {
                 System.out.println("Установите версию приложения для iOS по ссылке");
             }
-        }
         // 3 задача
         short year = 2021;
-        if (year % 4 == 0) {
-            if ((year % 100 != 0) || (year % 400 == 0)) {
-                System.out.println(year + " год является високосным");
-            } else{
-                System.out.println(year + " год не является високосным");
-            }
+        if ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0))) {
+            System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
         }
@@ -50,7 +43,6 @@ public class Main {
         byte monthNumber = 12;
         if (monthNumber < 1 || monthNumber > 12) {
             System.out.println("Не может быть такого");
-            return;
         }
 
         switch (monthNumber) {
